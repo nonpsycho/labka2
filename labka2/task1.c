@@ -5,19 +5,22 @@
 
 #define MAX_LENGTH 256
 
-int WordCounter(FILE* inputFile)
+static int WordCounter(FILE* inputFile)
 {
 	char currWord[MAX_LENGTH];
 	char prevWord[MAX_LENGTH];
 	int currCounter = 0;
 	int maxCounter = 0; 
 
-	fscanf(inputFile, "%s", currWord);
-	strcpy(prevWord, currWord);
+	if (fscanf(inputFile, "%s", currWord) != EOF)
+	{
+		strcpy(prevWord, currWord); 
+		currCounter = 1; 
+		maxCounter = currCounter;
 
-	currCounter = 1;
-	maxCounter = currCounter;  
-
+	}
+	
+	
 	while (fscanf(inputFile, "%s", currWord) != EOF)
 	{
 		

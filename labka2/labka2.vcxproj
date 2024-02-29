@@ -127,15 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="array.c" />
     <ClCompile Include="main.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
     </ClCompile>
     <ClCompile Include="task1.c" />
     <ClCompile Include="task2.c" />
+    <ClCompile Include="unitTests.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="array.h" />
     <ClInclude Include="task1.h" />
     <ClInclude Include="task2.h" />
+    <ClInclude Include="unitTests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
